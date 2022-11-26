@@ -1,0 +1,26 @@
+#!/bin/sh
+
+###########################################################
+# rast.runにようこそ。                                      #
+# isoファイル生成前の最後のステップです。                       #
+# ここではシステムの構築を終わらせisoイメージの作成の準備をします。 #
+##########################################################
+
+#マウントと環境変数の設定
+mount none -t proc /proc
+mount none -t sysfs /sys
+mount none -t devpts /dev/pts
+export HOME=/root
+export LC_ALL=C
+
+#不足しているソフトウェアのインストール
+apt install -y \
+
+#chrootから脱出しisoの作成
+apt clean
+rm -rf /tmp/*
+umount /proc
+umount /sys
+umount /dev/pts
+export HISTSIZE=0
+exit
