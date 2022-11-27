@@ -10,7 +10,7 @@ ubuntu_repo_url=""
 ubuntu_code_name=""
 arch=""
 iso_name=""
-
+iso_sub_name=""
 
 #必要なディレクトリの作成
 mkdir chroot
@@ -227,7 +227,7 @@ sudo xorriso \
    -as mkisofs \
    -iso-level 3 \
    -full-iso9660-filenames \
-   -volid "UBUNTU_FROM_SCRATCH" \
+   -volid "$iso_sub_name" \
    -output ../$iso_name.iso \
    -isohybrid-mbr /usr/lib/grub/i386-pc/boot_hybrid.img \
    --grub2-mbr /usr/lib/grub/i386-pc/boot_hybrid.img \
