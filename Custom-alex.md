@@ -1,1 +1,17 @@
+# 独自のISOファイルの作り方
+このマニュアルでは独自のISOファイルを作る方法を説明します。
 
+# build.sh
+まずはbuild.shから修正します。build.shをテキストファイルでもなんでもいいので開きます。
+
+そしてbuild.shの一番上の方にある#config設定の中身ubuntu_repo_url,ubuntu_code_name,arch,iso_name,iso_sub_nameを自分用に変えましょう。
+
+ubuntu_repo_urlはubuntuのリポジトリサイトのURLです。Ubuntu Japanese Teamのサイトを参考にしましょう。このURLはdebootstarapに使用されます。
+
+ubuntu_code_nameはubuntuのコードネームを入れましょう。コードネームといっても動物の名前が入ってない方を入れましょう。これをしないとdebootstrap時にエラーが出ます。
+
+archはArch Linuxのことではありません。アーキテクチャです。ここは通常amd64で問題ありません。(まず、Alex自体、amd64用に設計されています。)
+
+iso_nameはその名の通りisoファイルの名前です。最後に拡張子の.isoは必要ありません。ここは好きな名前にしましょう。
+
+iso_sub_nameは短縮した物にするのがおすすめです。
