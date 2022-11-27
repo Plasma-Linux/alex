@@ -118,15 +118,15 @@ EOF
 cat <<EOF> /etc/os-release
 PRETTY_NAME="$full_name"
 NAME="$os_name"
-VERSION_ID="22.04"
-VERSION="$os_ver"
-VERSION_CODENAME=$os_code_name
+VERSION_ID="$os_ver"
+VERSION="$os_ver ($os_code_name)"
+VERSION_CODENAME=$ubuntu_code_name
 ID=$id
-ID_LIKE="ubuntu debian"
-HOME_URL="https://neon.kde.org/"
-SUPPORT_URL="https://neon.kde.org/"
+ID_LIKE="ubuntu"
+HOME_URL="$home_url"
+SUPPORT_URL="home_url"
 BUG_REPORT_URL="https://bugs.kde.org/"
-PRIVACY_POLICY_URL="https://kde.org/privacypolicy/"
+PRIVACY_POLICY_URL="home_url"
 UBUNTU_CODENAME=$ubuntu_code_name
 EOF
 
