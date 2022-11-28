@@ -16,6 +16,7 @@ iso_sub_name=""
 mkdir chroot
 mkdir out
 mkdir work
+mkdir image
 
 #必要な依存関係のインストール
 sudo chmod 775 ./deps.sh
@@ -228,7 +229,7 @@ sudo xorriso \
    -iso-level 3 \
    -full-iso9660-filenames \
    -volid "$iso_sub_name" \
-   -output ../$iso_name.iso \
+   -out ../$iso_name.iso \
    -isohybrid-mbr /usr/lib/grub/i386-pc/boot_hybrid.img \
    --grub2-mbr /usr/lib/grub/i386-pc/boot_hybrid.img \
    --grub2-boot-info \
