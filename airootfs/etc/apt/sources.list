@@ -1,0 +1,7 @@
+deb $ubuntu_repo_url $ubuntu_code_name main restricted universe multiverse
+deb $ubuntu_repo_url $ubuntu_code_name-security main restricted universe multiverse
+deb $ubuntu_repo_url $ubuntu_code_name-updates main restricted universe multiverse
+deb $ubuntu_repo_url $ubuntu_code_name-backports main restricted universe multiverse
+
+ubuntu_code_name=""
+ubuntu_repo_url=""
